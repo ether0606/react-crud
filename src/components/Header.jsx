@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
 
 const navigation = [
-  { label: 'Home', href: '/#home' },
+  { label: 'Home', href: '/' },
   { label: 'Shop', href: '/shop' },
   { label: 'About us', href: '/#about' },
   { label: 'Services', href: '/#services' },
@@ -36,13 +37,15 @@ function Header() {
           <ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             {navigation.map((item) => (
               <li className={(item.label === 'Shop' && currentPath === '/shop') || (item.label === 'Home' && currentPath === '/') ? 'active' : ''} key={item.label}>
-                <a className="nav-link" href={item.href} onClick={closeMenu}>{item.label}</a>
+                <Link className="nav-link" to={item.href} onClick={closeMenu}>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-md-5">
-            <li><a className="nav-link" href={isAccountRoute ? '/dashboard' : '/login'} aria-label={isAccountRoute ? 'Your account dashboard' : 'Sign in to your account'}><img src="/furni/images/user.svg" alt="" /></a></li>
-            <li><a className="nav-link" href="/shop" aria-label="Shopping cart"><img src="/furni/images/cart.svg" alt="" /></a></li>
+            <li><Link className="nav-link" to={isAccountRoute ? '/dashboard' : '/login'} aria-label={isAccountRoute ? 'Your account dashboard' : 'Sign in to your account'}><img src="/furni/images/user.svg" alt="" /></Link></li>
+            <li><Link className="nav-link" to="/shop" aria-label="Shopping cart"><img src="/furni/images/cart.svg" alt="" /></Link></li>
           </ul>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { authApi } from '../lib/authApi.js'
+import { authApi } from '../../lib/authApi.js'
 
 function DashboardPage() {
   const [account, setAccount] = useState({ status: 'loading', user: null, message: '' })

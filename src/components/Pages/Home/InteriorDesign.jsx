@@ -1,4 +1,4 @@
-import { imageGrid } from '../data/homepage.js'
+import { imageGrid } from '../../../data/homepage.js'
 
 function InteriorDesign() {
   return (

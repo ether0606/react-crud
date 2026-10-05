@@ -1,4 +1,4 @@
-import { journalPosts } from '../data/homepage.js'
+import { journalPosts } from '../../../data/homepage.js'
 
 function Journal() {
   return (

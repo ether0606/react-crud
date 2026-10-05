@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { authApi } from '../lib/authApi.js'
+import {Link} from 'react-router'
 
 function LoginPage() {
   const [email, setEmail] = useState('')
@@ -47,7 +48,7 @@ function LoginPage() {
                 {isSubmitting ? 'Signing in…' : 'Sign in'}
               </button>
             </form>
-            <p className="account-switch">New to Furni? <a href="/register">Create an account</a></p>
+            <p className="account-switch">New to Furni? <Link to="/register">Create an account</Link></p>
           </div>
         </div>
       </div>

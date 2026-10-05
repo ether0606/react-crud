@@ -1,4 +1,4 @@
-import { features } from '../data/homepage.js'
+import { features } from '../../../data/homepage.js'
 
 function WhyChooseUs() {
   return (

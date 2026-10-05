@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { shopProducts } from '../data/homepage.js'
+import { useParams } from 'react-router'
 
-function ProductDetailPage({ productId }) {
-  const product = shopProducts.find((item) => item.id === productId)
+function ProductDetailPage() {
+  const { id } = useParams()
+  const product = shopProducts.find((item) => item.id === parseInt(id))
   const [quantity, setQuantity] = useState(1)
   const [selectedColor, setSelectedColor] = useState(product?.colors[0]?.name ?? '')
   const [cartMessage, setCartMessage] = useState('')

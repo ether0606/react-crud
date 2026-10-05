@@ -1,4 +1,5 @@
-import { shopProducts } from '../data/homepage.js'
+import { shopProducts } from '../../data/homepage.js'
+import { Link } from 'react-router'
 
 function ShopPage() {
   return (
@@ -22,9 +23,9 @@ function ShopPage() {
                   <img src={product.image} className="img-fluid product-thumbnail" alt={product.name} />
                   <h3 className="product-title">{product.name}</h3>
                   <strong className="product-price">{product.price}</strong>
-                  <a className="icon-cross" href={`/product/${product.id}`} aria-label={`View details for ${product.name}`}>
+                  <Link className="icon-cross" to={`/product/${product.id}`} aria-label={`View details for ${product.name}`}>
                     <img src="/furni/images/cross.svg" className="img-fluid" alt="" />
-                  </a>
+                  </Link>
                 </article>
               </div>
             ))}

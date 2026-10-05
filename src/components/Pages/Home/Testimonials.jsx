@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { testimonials } from '../data/homepage.js'
+import { testimonials } from '../../../data/homepage.js'
 
 function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)

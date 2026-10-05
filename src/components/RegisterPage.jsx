@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { authApi } from '../lib/authApi.js'
+import {Link} from 'react-router'
 
 function RegisterPage() {
   const [fullName, setFullName] = useState('')
@@ -49,7 +50,7 @@ function RegisterPage() {
                 {isSubmitting ? 'Creating account…' : 'Create account'}
               </button>
             </form>
-            <p className="account-switch">Already have an account? <a href="/login">Sign in</a></p>
+            <p className="account-switch">Already have an account? <Link to="/login">Sign in</Link></p>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { products } from '../data/homepage.js'
+import { products } from '../../../data/homepage.js'
 
 function ProductSection() {
   return (
